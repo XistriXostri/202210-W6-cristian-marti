@@ -1,9 +1,9 @@
-import {foo} from "./index.js"
+import { foo } from './foo.js';
 
 describe('Given foo function', () => {
     const givenAndExpectedCases = [
-        { givenA: 1, givenB: 2,  expected: 3 },
-        { givenA: 2, givenB: 2,  expected: 4 },
+        { givenA: 1, givenB: 2, expected: 3 },
+        { givenA: 2, givenB: 2, expected: 4 },
     ];
 
     givenAndExpectedCases.forEach((it) => {
