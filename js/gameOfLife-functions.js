@@ -58,9 +58,9 @@ export function increaseAdjacent(cel, matrix) {
 export function celAliveOrDead(cel, matrix) {
     if (cel.alive) {
         increaseAdjacent(cel, matrix);
-        return 'X';
+        return 'O';
     }
-    return 'O';
+    return '·';
 }
 export function showMatrix(matrix) {
     let table = '';
@@ -88,21 +88,3 @@ export function envolveCels(matrix) {
     });
     showMatrix(matrix);
 }
-
-function gameOfLife(dimensions, times) {
-    let count = 0;
-    let prueba = createMatrix(dimensions);
-    prueba[1][3].alive = true;
-    prueba[1][2].alive = true;
-    prueba[1][1].alive = true;
-
-    console.log('Matriz inicial:');
-    showMatrix(prueba);
-    while (count < times) {
-        count++;
-        console.log('Matriz ' + count);
-        envolveCels(prueba);
-    }
-}
-
-gameOfLife(5, 10);
