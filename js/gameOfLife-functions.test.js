@@ -4,7 +4,7 @@ import {
     celAliveOrDead,
     showMatrix,
     bornLiveOrDie,
-} from './gameOfLife.js';
+} from './gameOfLife-functions.js';
 
 describe('Given checkAdjacentsCoordinates function', () => {
     const givenAndExpectedCases = [
